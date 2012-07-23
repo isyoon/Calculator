@@ -45,7 +45,6 @@
 {
     [self.brain pushOpernad:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
-    NSLog(@"resutl %@",[self.brain popOperand]);
     self.display.text = [NSString stringWithFormat:@"%g", [self.brain popOperand]];
 }
 

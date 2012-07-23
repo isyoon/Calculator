@@ -35,12 +35,14 @@
 - (double) performOperation : (NSString *) operation
 {
     double result = 0;
-        NSLog(@"operation = %@",operation);
-
     if ([operation isEqualToString:@"+"]) {
         result = [self popOperand]  + [self popOperand];
     }else if([@"*" isEqualToString:operation]) {
         result = [self popOperand] * [self popOperand];
+    }else if([@"-" isEqualToString:operation]) {
+        result = [self popOperand] - [self popOperand];
+    }else if([@"/" isEqualToString:operation]) {
+        result = [self popOperand] / [self popOperand];
     }
     // calculate result
     return result;
